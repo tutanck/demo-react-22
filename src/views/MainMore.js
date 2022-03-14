@@ -15,7 +15,7 @@ export default function MainMore() {
       <Logo fill={color} className="App-logo" />
 
       <Typography variant="h5" component="h2">
-        Nous vous souhaitons la Bienvenne à la T@znozaure 2022
+        Bienvenne à la T@znozaure 2022
       </Typography>
 
       <Palette onSelectColor={onChangeColor} loadingColor={loadingColor} />
