@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import delay from "../utils/delay";
+import colors from "../utils/colors";
 
 export default function useDoThings(initialValues = {}) {
   const { defaultColor } = initialValues;
@@ -18,5 +19,5 @@ export default function useDoThings(initialValues = {}) {
     setLoadingColor();
   };
 
-  return { loadingColor, color, onChangeColor };
+  return { colors, loadingColor, color, onChangeColor };
 }

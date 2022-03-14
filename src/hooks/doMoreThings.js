@@ -6,6 +6,7 @@ export default function useDoMoreThings(initialValues = {}) {
   const { defaultColor } = initialValues;
 
   const {
+    colors,
     loadingColor,
     color,
     onChangeColor: onChange,
@@ -22,5 +23,5 @@ export default function useDoMoreThings(initialValues = {}) {
 
   useOnDone(handleClick, [changeStatus]);
 
-  return { loadingColor, color, onChangeColor };
+  return { colors, loadingColor, color, onChangeColor };
 }

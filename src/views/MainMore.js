@@ -1,13 +1,13 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Button, Typography } from "@mui/material";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../logo.svg";
 import Palette from "../components/Palette";
 import useDoMoreThings from "../hooks/doMoreThings";
 
 export default function MainMore() {
-  const { loadingColor, color, onChangeColor } = useDoMoreThings({
+  const { colors, loadingColor, color, onChangeColor } = useDoMoreThings({
     defaultColor: "#61DAFB",
   });
 
@@ -19,7 +19,11 @@ export default function MainMore() {
         Bienvenne à la T@znozaure 2022
       </Typography>
 
-      <Palette onSelectColor={onChangeColor} loadingColor={loadingColor} />
+      <Palette
+        colors={colors}
+        loadingColor={loadingColor}
+        onSelectColor={onChangeColor}
+      />
 
       <Button variant="outlined" component={RouterLink} to="/">
         Main
