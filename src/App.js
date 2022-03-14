@@ -1,11 +1,12 @@
 import "./App.css";
-import Main from "./views/Main";
+// import Main from "./views/Main";
+import MainMore from "./views/MainMore";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Main />
+        <MainMore />
       </header>
     </div>
   );

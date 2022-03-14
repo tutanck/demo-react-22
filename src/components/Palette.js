@@ -2,7 +2,6 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import LoadingButton from "@mui/lab/LoadingButton";
 import { Grid, Typography } from "@mui/material";
-import CircularProgress from "@mui/material/CircularProgress";
 
 import colors from "../utils/colors";
 
@@ -26,15 +25,20 @@ export default function Palette({ loadingColor, onSelectColor = () => {} }) {
               variant="contained"
               onClick={() => onSelectColor(color)}
               sx={{
-                color,
+                color: "white",
+                fontWeight: "bold",
                 backgroundColor: color,
                 opacity: 0.8,
-                "&:hover": { color, backgroundColor: color, opacity: 1 },
+                "&:hover": {
+                  color: "white",
+                  backgroundColor: color,
+                  opacity: 1,
+                },
               }}
               loading={loadingColor === color}
               disabled={loadingColor && loadingColor !== color}
             >
-              Button
+              {color}
             </LoadingButton>
           </Grid>
         ))}
