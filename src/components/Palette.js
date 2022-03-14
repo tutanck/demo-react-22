@@ -2,7 +2,6 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import LoadingButton from "@mui/lab/LoadingButton";
 import { Grid, Typography } from "@mui/material";
-
 import colors from "../utils/colors";
 
 export default function Palette({ loadingColor, onSelectColor = () => {} }) {
@@ -20,7 +19,7 @@ export default function Palette({ loadingColor, onSelectColor = () => {} }) {
 
       <Grid container spacing={2}>
         {colors.map((color) => (
-          <Grid item>
+          <Grid item key={color}>
             <LoadingButton
               variant="contained"
               onClick={() => onSelectColor(color)}

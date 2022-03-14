@@ -1,13 +1,10 @@
 import "./App.css";
-// import Main from "./views/Main";
-import MainMore from "./views/MainMore";
+import Router from "./routes";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <MainMore />
-      </header>
+      <Router />
     </div>
   );
 }

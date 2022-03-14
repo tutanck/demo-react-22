@@ -2,7 +2,6 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
 import { ReactComponent as Logo } from "../logo.svg";
-
 import Palette from "../components/Palette";
 import useDoMoreThings from "../hooks/doMoreThings";
 
