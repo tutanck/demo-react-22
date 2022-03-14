@@ -1,6 +1,7 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
+import { Link as RouterLink } from 'react-router-dom';
 import { ReactComponent as Logo } from "../logo.svg";
 import Palette from "../components/Palette";
 import useDoMoreThings from "../hooks/doMoreThings";
@@ -19,6 +20,10 @@ export default function MainMore() {
       </Typography>
 
       <Palette onSelectColor={onChangeColor} loadingColor={loadingColor} />
+
+      <Button variant="outlined" component={RouterLink} to="/">
+        Main
+      </Button>
     </Stack>
   );
 }
