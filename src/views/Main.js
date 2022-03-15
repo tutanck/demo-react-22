@@ -1,14 +1,14 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import { Button, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Typography } from "@mui/material";
 import { ReactComponent as Logo } from "../logo.svg";
+import LinkButton from "../components/LinkButton";
 import Palette from "../components/Palette";
 import useDoThings from "../hooks/doThings";
 
-export default function Main() {
+export default function Main({ defaultColor }) {
   const { colors, loadingColor, color, onChangeColor } = useDoThings({
-    defaultColor: "#61DAFB",
+    defaultColor,
   });
 
   return (
@@ -25,9 +25,7 @@ export default function Main() {
         onSelectColor={onChangeColor}
       />
 
-      <Button variant="outlined" component={RouterLink} to="/more">
-        More
-      </Button>
+      <LinkButton to="/more">More</LinkButton>
     </Stack>
   );
 }

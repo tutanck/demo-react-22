@@ -6,13 +6,11 @@ export default function useDoMoreThings(initialValues = {}) {
   const { defaultColor } = initialValues;
 
   const {
+    color,
     colors,
     loadingColor,
-    color,
     onChangeColor: onChange,
-  } = useDoThings({
-    defaultColor,
-  });
+  } = useDoThings({ defaultColor });
 
   const { enqueueSnackbar } = useSnackbar();
 

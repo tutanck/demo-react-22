@@ -1,7 +1,7 @@
 import { Navigate, useRoutes } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
-import MainMore from "./views/MainMore";
-import Main from "./views/Main";
+import MainPage from "./pages/MainPage";
+import MorePage from "./pages/MorePage";
 
 export default function Router() {
   return useRoutes([
@@ -9,8 +9,8 @@ export default function Router() {
       path: "/",
       element: <MainLayout />,
       children: [
-        { path: "/", element: <Main /> },
-        { path: "more", element: <MainMore /> },
+        { path: "/", element: <MainPage /> },
+        { path: "more", element: <MorePage /> },
         { path: "*", element: <Navigate to="/" /> },
       ],
     },

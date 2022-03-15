@@ -10,11 +10,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-
-TODO 
-REACT ROUTER 6
-ONE SHOT HOOK
-SX (STRONG COUPLED STYLES)
-*/

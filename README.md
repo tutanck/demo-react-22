@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Primitives
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Route
+2. Page
+3. Hook
+4. View
+5. Component
 
-## Available Scripts
+# En détails
 
-In the project directory, you can run:
+## Route
 
-### `npm start`
+La **Route** est la jonction entre une page est une Url.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La **Page** représente le point d'entrée d'une ou plusieurs View.
+Chaque page doit être associée à une url sinon il s'agit d'une view.
 
-### `npm test`
+## Hook
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Le **Hook** détient la logique utilisable par une ou plusieurs views. Il est une composition d'un ou plusieurs hooks sous-jacents et régit en totalité le fonctionnement des views qui l'utilisent.
 
-### `npm run build`
+## View
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La **View** représente la jonction entre les composants et la logique. La view ne détient pas à proprement parler la logique mais l'expose à ces composants enfants. Elle peut aussi utiliser ses propres props pour initialiser le hook sous-jacent.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Recommandations:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Doit idéalement n'importer qu'**un seul hook** (la logique) et en exposer les clés aux composants sous-jacents via les props.
+- Idéalement ne pas composer les view entres elles mais plutôt le faire au niveau des pages.
 
-### `npm run eject`
+## Component
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Le **Component** est le plus petit élément du système.
+Son rôle est l'affichage de la donnée en provenance des niveaux supérieurs et la transmission des ordres vers les niveaux supérieurs.
+Ni plus ni moins.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Recommandations:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Ne doit idéalement détenir **aucune** logique (ni métier, ni technique)
+- Connection à la logique **uniquement** via les props.
+- Les imports (dépendances) sont **uniquement** des dépendances envers les composants enfants.
+- Tous les composants enfants sont des composants (Pas de view, ni de hooks, ou autres éléments appartenant aux niveaux supérieurs)
+- Couplage fort avec le style: le composant détient son style.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Nouveautés
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Routage déclaratif avec **React router v6**
+- "*From Async to sync*" avec **@tutanck/react-async**
