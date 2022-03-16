@@ -26,14 +26,14 @@ Recommandations:
 
 La **View** représente la jonction entre les composants et la logique. La view ne détient pas à proprement parler la logique mais l'expose à ces composants enfants. Elle peut aussi utiliser ses propres props pour initialiser le hook sous-jacent.
 
-## Hook
-
-Le **Hook** détient la logique utilisable par une ou plusieurs views. Il est une composition d'un ou plusieurs hooks sous-jacents et régit en totalité le fonctionnement des views qui l'utilisent.
-
 Recommandations:
 
 - Doit idéalement n'importer qu'**un seul hook** (la logique) et en exposer les clés aux composants sous-jacents via les props.
 - Idéalement ne pas composer les view entres elles mais plutôt le faire au niveau des pages.
+
+## Hook
+
+Le **Hook** détient la logique utilisable par une ou plusieurs views. Il est une composition d'un ou plusieurs hooks sous-jacents et régit en totalité le fonctionnement des views qui l'utilisent.
 
 ## Page
 
@@ -54,18 +54,18 @@ La **Route** est la jonction entre une page est une Url.
 
 **pros**
 
-\+ On modifie un seul fichier par type de chnagement
+\+ On modifie un seul fichier par type de changement
 
 \+ Moins de temps à débuguer (tout est transparent)
 
 \+ Forte interchangeabilité de toutes les parties du code
 
-\+ -> Refactos de plus en plus rapides 
+\+ -> Refactos de plus en plus rapides
 
-\+ Temps de développement inversement exponentiel
+\+ -> Temps de développement inversement exponentiel
 
 # Nouveautés
 
-- Routage déclaratif avec **React router v6**
-- "_From Async to sequence_" avec **@tutanck/react-async**
-- Styled Components
+- Routage déclaratif avec [**React router v6**](https://reactrouter.com/docs/en/v6/examples/route-objects)
+- "_From Async to sequence_" avec [**@tutanck/react-async**](https://www.npmjs.com/package/@tutanck/react-async)
+- [Styled Components](https://mui.com/system/styled/)
