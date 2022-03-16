@@ -60,7 +60,9 @@ La **Route** est la jonction entre une page est une Url.
 
 \+ Forte interchangeabilité de toutes les parties du code
 
-\+ -> Refactos de plus en plus rapides
+\+ -> Refactos de plus en plus rapides 
+
+\+ Temps de développement inversement exponentiel
 
 # Nouveautés
 
