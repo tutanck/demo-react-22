@@ -16,7 +16,7 @@ export default function Main({ defaultColor }) {
       <Logo fill={color} className="App-logo" />
 
       <Typography variant="h5" component="h2">
-        Bienvenne à la T@znozaure 2022
+        Bienvenne à la Technoz@ure 2022
       </Typography>
 
       <Palette
