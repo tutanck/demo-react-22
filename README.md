@@ -16,7 +16,7 @@ Ni plus ni moins.
 
 Recommandations:
 
-- Ne doit idéalement détenir **aucune** logique (ni métier, ni technique)
+- Ne doit détenir **aucune** logique (métier)
 - Connection à la logique **uniquement** via les props.
 - Les imports (dépendances) sont **uniquement** des dépendances envers les composants enfants.
 - Tous les composants enfants sont des composants (Pas de view, ni de hooks, ou autres éléments appartenant aux niveaux supérieurs)
