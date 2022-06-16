@@ -8,10 +8,6 @@
 
 # En détails
 
-## Route
-
-La **Route** est la jonction entre une page est une Url.
-
 ## Component
 
 Le **Component** est le plus petit élément du système.
@@ -43,6 +39,10 @@ Le **Hook** détient la logique utilisable par une ou plusieurs views. Il est un
 
 La **Page** représente le point d'entrée d'une ou plusieurs View.
 Chaque page doit être associée à une url sinon il s'agit d'une view.
+
+## Route
+
+La **Route** est la jonction entre une page est une Url.
 
 
 # Diff
