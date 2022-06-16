@@ -1,12 +1,16 @@
 # Primitives
 
 1. Component
-2. View
-3. Hook
-4. Page
-5. Route
+2. Hook
+3. View
+5. Page
+6. Route
 
 # En détails
+
+## Route
+
+La **Route** est la jonction entre une page est une Url.
 
 ## Component
 
@@ -40,9 +44,6 @@ Le **Hook** détient la logique utilisable par une ou plusieurs views. Il est un
 La **Page** représente le point d'entrée d'une ou plusieurs View.
 Chaque page doit être associée à une url sinon il s'agit d'une view.
 
-## Route
-
-La **Route** est la jonction entre une page est une Url.
 
 # Diff
 
